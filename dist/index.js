@@ -55491,7 +55491,7 @@ function getRelease(tool) {
     return __awaiter(this, void 0, void 0, function* () {
         const { owner, name, versionSpec, checkLatest = false, features = 'default' } = tool;
         const isNightly = versionSpec === 'nightly';
-	code.debug(`getRelease of owner:${owner} name:${name} versionSpec:${versionSpec} checkLatest:${checkLatest} githubToken:${tool.githubToken}`);
+	core.debug(`getRelease of owner:${owner} name:${name} versionSpec:${versionSpec} checkLatest:${checkLatest} githubToken:${tool.githubToken}`);
         // Use public GitHub API for Nushell assets query, make it work for GitHub Enterprise
         const octokit = new rest_1.Octokit({ auth: tool.githubToken, baseUrl: 'https://api.github.com' });
         return octokit
